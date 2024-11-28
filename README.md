@@ -1,4 +1,4 @@
 # JQueryUISlider
 
 github link https://github.com/AngelChikumbirike
-Applicaton link:  
+Applicaton link:  https://angelchikumbirike.github.io/JQueryUISlider/
