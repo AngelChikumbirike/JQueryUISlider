@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Multiplication Table with Sliders and Tabs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Interactive Multiplication Table with Tabs</h1>
+  <div id="manage-tabs">
+    <h2>Manage Tabs</h2>
+    <div id="tab-list"></div>
+    <button id="delete-selected-tabs">Delete Selected Tabs</button>
+  </div>
+  <div id="tabs">
+    <ul>
+      <li><a href="#input-tab">Inputs</a></li>
+    </ul>
+    <div id="input-tab">
+      <form id="multiplication-form">
+        <div class="input-container">
+          <label for="start-horiz">Starting Number (Horizontal): <span class="required">*</span></label>
+          <input type="number" id="start-horiz" name="startHoriz" />
+          <div id="slider-start-horiz"></div>
+        </div>
+        <div class="input-container">
+          <label for="end-horiz">Ending Number (Horizontal): <span class="required">*</span></label>
+          <input type="number" id="end-horiz" name="endHoriz" />
+          <div id="slider-end-horiz"></div>
+        </div>
+        <div class="input-container">
+          <label for="start-vert">Starting Number (Vertical): <span class="required">*</span></label>
+          <input type="number" id="start-vert" name="startVert" />
+          <div id="slider-start-vert"></div>
+        </div>
+        <div class="input-container">
+          <label for="end-vert">Ending Number (Vertical): <span class="required">*</span></label>
+          <input type="number" id="end-vert" name="endVert" />
+          <div id="slider-end-vert"></div>
+        </div>
+        <button type="submit">Generate Table</button>
+      </form>
+    </div>
+    <!-- Tab Content -->
+    <div id="table-container" style="display: none;">
+      <!-- Dynamically generated tables will be placed here -->
+    </div>
+  </div>
+</body>
+</html>

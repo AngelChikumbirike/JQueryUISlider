@@ -1,0 +1,294 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main Header Styling */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Tabs Container */
+#tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Button Styling */
+button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Tab Navigation Bar */
+#tabs > ul {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of tabs */
+    overflow-x: auto;
+    margin: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    scrollbar-width: thin; /* For Firefox: Add thin scrollbar */
+}
+
+
+
+/* Tab Navigation Bar - Adjust padding for delete icon */
+#tabs > ul li {
+    margin-right: 10px;
+    position: relative; /* Ensure delete icon is positioned relative to the tab */
+    flex-shrink: 0; /* Prevent tabs from shrinking */
+}
+
+#tabs > ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+#tabs > ul li a:hover,
+#tabs > ul li.ui-tabs-active a {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Delete Icon Positioning */
+.ui-icon-close {
+    position: absolute;
+    top: 50%;
+    right: 5px; /* Align icon to the right inside the tab */
+    transform: translateY(-50%); /* Vertically center the icon */
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.ui-icon-close:hover {
+    color: #dc3545;
+}
+
+/* Tab Content Area */
+#tabs > div {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Centering Input Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Input Container Styling */
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container label {
+    font-family: inherit; /* Inherit font-family from the parent or body */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input Styling */
+form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Styling for Error Messages */
+.input-error {
+    color: #dc3545!important; /* Red color for error messages */
+    font-size: 0.85rem; /* Slightly smaller font size */
+    font-weight: normal; /* Normal font weight for clean appearance */
+    font-style: normal; /* No italicization */
+    margin-top: 4px; /* Adjust spacing from the input field */
+    line-height: 1.2; /* Improve readability */
+    display: block; /* Ensure the error message appears below the input field */
+    text-align: left; /* Align error text to the left */
+    padding: 0; /* Remove padding */
+    background: none !important; /* Ensure no background color */
+    border: none !important; /* Ensure border is removed */
+    box-shadow: none !important; /* Ensure no shadow effects */
+}
+
+/* Error Message Styling */
+#error-message {
+    display: none; /* Hidden by default */
+    color: #dc3545;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+    border-top: 1px solid #ddd; /* Optional: visually separate from form */
+    padding-top: 10px;
+}
+
+.error {
+    border: 2px solid #dc3545; /* Highlight the input field with red border */
+    border-radius: 4px; /* Smooth rounded edges for input */
+    outline: none; /* Remove the default browser outline */
+    padding: 10px; /* Maintain consistent input padding */
+}
+
+/* Consistent Required Marker */
+label .required {
+    color: #dc3545; /* Matches error color for visibility */
+    font-size: 0.9em;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+/* Ensure the table container is scrollable */
+#table-container {
+    max-width: 100%; /* Ensure the table container spans the width of the parent */
+    max-height: 400px; /* Limit the height to enforce vertical scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+    overflow-y: auto; /* Enable vertical scrolling for tall tables */
+    margin: 20px 0; /* Add spacing above and below the container */
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+/* Sticky Header Row */
+thead th {
+    background-color: #002244;
+    color: #ffffff;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* Sticky First Column */
+tbody th:first-child,
+tbody td:first-child {
+    background-color: #002244;
+    color: #ffffff;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) td:not(:first-child) {
+    background-color: #f7f7f7;
+}
+
+tbody tr:nth-child(odd) td:not(:first-child) {
+    background-color: #ffffff;
+}
+
+/* Manage Tabs Section */
+#manage-tabs {
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#manage-tabs h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#manage-tabs #tab-list {
+    max-height: 100px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#manage-tabs button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#manage-tabs button:hover {
+    background-color: #a71d2a;
+}
